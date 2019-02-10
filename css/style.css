@@ -1,0 +1,59 @@
+body {
+    background: linear-gradient(to top,#fec051, rgba(255, 249, 180, 0.93),#000000, #000000, #000000);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+body:before{
+    content:'';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    /*background: linear-gradient(to right bottom, rgba(255,255,255,0.2), #fec051 75%);*/
+}
+
+section {
+    margin: 75vh 0;
+}
+
+.sun {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+.typewriter{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 500px;
+}
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+            typing 3.5s steps(30, end),
+            blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+
